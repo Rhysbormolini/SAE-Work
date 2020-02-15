@@ -10,30 +10,37 @@ public class NewBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(this.transform.forward);  
+        Debug.Log(this.transform.forward);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.DownArrow) == true)
+        if (Input.GetKey(KeyCode.S) == true)
         {
             this.transform.position += this.transform.forward * movespeed * Time.deltaTime;
         }
 
-        if (Input.GetKey(KeyCode.UpArrow) == true)
+        if (Input.GetKey(KeyCode.W) == true)
         {
             this.transform.position -= this.transform.forward * movespeed * Time.deltaTime;
         }
 
+        if (Input.GetKey(KeyCode.E))
+        {
+            transform.Translate(Vector3.left * Time.deltaTime * movespeed, Space.Self); //LEFT
+        }
+        if (Input.GetKey(KeyCode.Q))
+        {
+            transform.Translate(Vector3.right * Time.deltaTime * movespeed, Space.Self); //RIGHT
+        }
 
-
-        if (Input.GetKey(KeyCode.RightArrow) == true)
+        if (Input.GetKey(KeyCode.D) == true)
         {
             transform.Rotate(Vector3.up * rotatespeed * Time.deltaTime);
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow) == true)
+        if (Input.GetKey(KeyCode.A) == true)
         {
             transform.Rotate(Vector3.up * -rotatespeed * Time.deltaTime);
         }
