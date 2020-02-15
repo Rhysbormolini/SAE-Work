@@ -7,6 +7,7 @@ public class NewBehaviourScript : MonoBehaviour
     public float movespeed = 10;
     public float rotatespeed = 10;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,24 +19,24 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.S) == true)
         {
-            this.transform.position += this.transform.forward * movespeed * Time.deltaTime;
+            transform.position -= Camera.main.transform.forward * movespeed * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.W) == true)
         {
-            this.transform.position -= this.transform.forward * movespeed * Time.deltaTime;
+            transform.position += Camera.main.transform.forward * movespeed * Time.deltaTime;
         }
 
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(Vector3.left * Time.deltaTime * movespeed, Space.Self); //LEFT
         }
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(Vector3.right * Time.deltaTime * movespeed, Space.Self); //RIGHT
         }
-
-        if (Input.GetKey(KeyCode.D) == true)
+      
+        /*if (Input.GetKey(KeyCode.D) == true)
         {
             transform.Rotate(Vector3.up * rotatespeed * Time.deltaTime);
         }
@@ -43,9 +44,8 @@ public class NewBehaviourScript : MonoBehaviour
         if (Input.GetKey(KeyCode.A) == true)
         {
             transform.Rotate(Vector3.up * -rotatespeed * Time.deltaTime);
-        }
+        } */
 
-
-        
     }
 }
+
