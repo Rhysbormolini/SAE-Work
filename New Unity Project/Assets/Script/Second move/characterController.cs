@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class characterController : MonoBehaviour
 
@@ -15,6 +16,7 @@ public class characterController : MonoBehaviour
     public float xp = 0;	// Amount of XP the player has
     public float xpForNextLevel = 5;   //Xp needed to level up, the higher the level, the harder it gets. 
     public int level = 0;   // Level of the player
+    public Text LevelCounter;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,7 @@ public class characterController : MonoBehaviour
         SetXpForNextLevel();
         SetCurrentMoveSpeed();
         SetCurrentjumpHeight();
+        LevelCounter.text = "Level: " + level;
     }
 
     void SetXpForNextLevel()
@@ -50,7 +53,7 @@ public class characterController : MonoBehaviour
     {
         xp = 0f;
         level++;
-        Debug.Log("level" + level);
+        LevelCounter.text = "Level: " + level;
         SetXpForNextLevel();
         SetCurrentMoveSpeed();
         SetCurrentjumpHeight();
