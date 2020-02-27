@@ -7,6 +7,7 @@ public class characterController : MonoBehaviour
 {
 
     public float speed = 7;
+    public float jumpHeight = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,10 @@ public class characterController : MonoBehaviour
 
         if (Input.GetKeyDown("escape"))
             Cursor.lockState = CursorLockMode.None;
-
+        
+        if (Input.GetKey(KeyCode.Space) == true && Mathf.Abs(this.GetComponent<Rigidbody>().velocity.y) < 0.01f)
+        {
+            this.GetComponent<Rigidbody>().velocity += Vector3.up * this.jumpHeight;
+        }
     }
 }
