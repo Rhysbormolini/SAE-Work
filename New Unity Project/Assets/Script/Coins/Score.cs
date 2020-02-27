@@ -29,6 +29,12 @@ public class Score : MonoBehaviour
             AddScore();
             ControllerScript.GainXP(1);
         }
+
+        else if (other.tag == "MegaCoin")
+        {
+            AddScore();
+            ControllerScript.GainXP(5);
+        }
     }
 
     void AddScore()
