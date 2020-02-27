@@ -10637,7 +10637,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!136 &1511019467
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10727,6 +10727,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7.5
   jumpHeight: 5
+  currentMoveSpeed: 0
+  currentjumpHeight: 0
+  xp: 0
+  xpForNextLevel: 10
+  level: 0
 --- !u!54 &1511019472
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14206,7 +14211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1978466959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14263,6 +14268,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7.5
   jumpHeight: 5
+  currentMoveSpeed: 0
+  currentjumpHeight: 0
+  xp: 0
+  xpForNextLevel: 10
+  level: 0
 --- !u!136 &1978466963
 CapsuleCollider:
   m_ObjectHideFlags: 0

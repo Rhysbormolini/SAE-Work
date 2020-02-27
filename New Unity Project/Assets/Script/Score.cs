@@ -7,12 +7,14 @@ public class Score : MonoBehaviour
 {
     public int ScoreCount;
     public Text ScoreText;
+    private characterController ControllerScript;
+
    
 
     // Start is called before the first frame update
     void Start()
     {
-
+        ControllerScript = GetComponent<characterController>();
     }
 
     // Update is called once per frame
@@ -25,6 +27,7 @@ public class Score : MonoBehaviour
         if (other.tag == "Coin")
         {
             AddScore();
+            ControllerScript.GainXP(1);
         }
     }
 
