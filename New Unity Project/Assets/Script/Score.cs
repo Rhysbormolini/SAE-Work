@@ -7,7 +7,7 @@ public class Score : MonoBehaviour
 {
     public int ScoreCount;
     public Text ScoreText;
-    public int targetScore = 10;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -18,17 +18,8 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // check the number of coins that have been collected 
-        if (ScoreCount == this.targetScore)
-        {
-            // output that the number of target coins have been collected 
-            Debug.Log("Player had collected " + this.targetScore + " Coins");
 
-            // deactivate componentso that it stops checking the score each update 
-            this.gameObject.SetActive(false);
-        }
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Coin")
@@ -42,4 +33,5 @@ public class Score : MonoBehaviour
         ScoreCount++;
         ScoreText.text = ScoreCount.ToString();
     }
+        
 }

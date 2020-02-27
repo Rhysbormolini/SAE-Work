@@ -15,7 +15,7 @@ public class camMouseLook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        character = this.transform.parent.gameObject;  
+       character = this.transform.parent.gameObject;  
     }
 
     // Update is called once per frame
