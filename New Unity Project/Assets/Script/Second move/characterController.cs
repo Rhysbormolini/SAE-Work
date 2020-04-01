@@ -86,11 +86,11 @@ public class characterController : MonoBehaviour
 
 
             float translation = Input.GetAxis("Vertical") * currentMoveSpeed;
-            float Straffe = Input.GetAxis("Horizontal") * currentMoveSpeed;
+            float straffe = Input.GetAxis("Horizontal") * currentMoveSpeed;
             translation *= Time.deltaTime;
-            Straffe *= Time.deltaTime;
+            straffe *= Time.deltaTime;
 
-            transform.Translate(Straffe, 0, translation);
+            transform.Translate(straffe, 0, translation);
 
             if (Input.GetKeyDown("escape"))
                 Cursor.lockState = CursorLockMode.None;
