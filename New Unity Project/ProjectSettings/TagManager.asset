@@ -8,6 +8,7 @@ TagManager:
   - Character
   - Coin
   - MegaCoin
+  - word
   layers:
   - Default
   - TransparentFX
