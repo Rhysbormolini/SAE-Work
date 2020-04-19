@@ -2015,20 +2015,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   jumpHeight: 5
---- !u!114 &105132440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105132432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55b0afcf15c455a4f876c23579268889, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LetterCount: 0
-  LetterText: {fileID: 273013853}
 --- !u!1 &105958630
 GameObject:
   m_ObjectHideFlags: 0
